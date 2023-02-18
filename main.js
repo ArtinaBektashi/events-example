@@ -39,4 +39,19 @@ const EventEmmiter=require("events");
     console.log("Total number of listeners"+`${eventNames} : ${count}`)
    })
 
-  
+   //Some changes
+
+
+   //Pasi kemi  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; Te krijohet nje metod “getEvenNumbers” qe kthen vetem numrat qift. Te shfaqen ne eventin EvenEvent.
+   const numbers =[1,2,3,4,5,6,7,8,9,10];
+
+   function getEvenNumbers(numbers){
+    return evens=numbers.filter((num) => num%2===0);
+   }
+
+
+   event.on('printedNr',()=>{
+    console.log(getEvenNumbers(numbers));
+   })
+   event.emit('printedNr')
+
