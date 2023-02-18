@@ -80,6 +80,5 @@ const EventEmmiter=require("events");
 
    
    counter.value=1;
-   
    counter.value=2;
   
