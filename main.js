@@ -11,6 +11,7 @@ const EventEmmiter=require("events");
 
     event.emit('runEvent_1');
 
+
     //Second request
     const obj={
         init:'Node',
@@ -26,18 +27,16 @@ const EventEmmiter=require("events");
     event.on('testEvent',()=>{
         console.log('only test')
     });
-    event.emit('testEvent');
-
+    event.removeAllListeners('testEvent');
     //Third request
    const events=  event.eventNames();
    console.log(events)
+
+   console.log(event.getMaxListeners())
 
    events.forEach(eventNames =>{
     const count=event.listenerCount(eventNames);
     console.log("Total number of listeners"+`${eventNames} : ${count}`)
    })
 
-   //Fourth request
-   event.removeListener('testEvent',()=>{
-    console.log("test event removed")
-   });
+  
