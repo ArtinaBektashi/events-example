@@ -56,3 +56,30 @@ const EventEmmiter=require("events");
    event.emit('printedNr')
 
    //some changes
+
+   class Counter extends EventEmmiter{
+
+    constructor(initialValue){
+        super();
+        this._value=initialValue;
+    }
+    get value(){
+        return this._value;
+    }
+    set value(newValue){
+        this._value=newValue;
+        this.emit('increment',newValue)
+    }
+   }
+
+   const counter= new Counter();
+
+   counter.on('increment',(newValue)=>{
+    console.log(`value has changed to ${newValue}`);
+   })
+
+   
+   counter.value=1;
+   
+   counter.value=2;
+  
