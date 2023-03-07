@@ -1,0 +1,19 @@
+synchronize i pasqyron klasat ne databaze, synchronize duhet te jet off ne production 
+sepse nese bejm ndryshime psh ne data type munden me hup te dhenat ne databaza apo tabela,
+me migrime i menaxhojm mos me na hup te dhenat , mu kthy apet ne versionet qe na duhen
+
+repository eshte abtraction layer qe mund ti bejme operacionet e databazes
+
+:name - perdoret per me kriju parameter nquery, duhet : sepse pastaj e merr vleren e asaj name, edhe nuk trajtohet si parameter
+
+.where perdoret per kusht, pastaj andWhere. per kushtin e dyt
+
+await e pret procesin deri sa te perfundoj , pastaj vazhdon me procesin tjeter
+
+lejohen multiple connections 
+
+funksioni async ne return type ne typescript kthen Promise ne fillim : Promise <boolean>
+
+eslint tool qe shikon kualitetin e kodit, detekton erroret dhe bugs ne baze te disa rregullave
+
+
